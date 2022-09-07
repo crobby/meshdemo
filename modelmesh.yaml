@@ -11,9 +11,6 @@ spec:
         path: odh-common
     name: odh-common
   - kustomizeConfig:
-#      parameters:
-#      - name: etcd_namespace
-#        value: "{'endpoints': 'http://etcd.opendatahub:2379','root_prefix': 'modelmesh-serving'}"
       overlays:
       - odh-model-controller
       repoRef:
@@ -27,7 +24,6 @@ spec:
     name: odh-dashboard
   repos:
   - name: manifests
-#    uri: https://api.github.com/repos/opendatahub-io/odh-manifests/tarball/pull/606/head
-    uri: https://github.com/crobby/odh-manifests/tarball/mesh09
+    uri: https://github.com/opendatahub-io/odh-manifests/tarball/master
   version: master
 

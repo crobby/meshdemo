@@ -24,14 +24,12 @@ spec:
   containers:
     - args:
         - server
-        # - /data
         - /data1
       env:
         - name: MINIO_ACCESS_KEY
           value:  THEACCESSKEY
         - name: MINIO_SECRET_KEY
           value: <secretkey>
-      # image: quay.io/cloudservices/minio:latest
       image: quay.io/opendatahub/modelmesh-minio-examples:v0.8.0
       name: minio
 ---
